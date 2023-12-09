@@ -9,7 +9,7 @@ namespace Gestion_Livres.Data
         {
 
         }
-        DbSet<Livre> Livres { get; set; }
-        DbSet<Exemplaire> Exemplaires { get; set; }
+        public DbSet<Livre> Livres { get; set; }
+        public DbSet<Exemplaire> Exemplaires { get; set; }
     }
 }

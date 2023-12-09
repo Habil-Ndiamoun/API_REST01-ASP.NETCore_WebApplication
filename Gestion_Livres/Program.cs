@@ -39,4 +39,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+// Add the CreateDbIfNotExists method call
+app.CreateDbIfNotExists();
+
 app.Run();
