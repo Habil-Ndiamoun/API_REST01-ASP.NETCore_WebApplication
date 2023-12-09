@@ -1,8 +1,19 @@
+using Gestion_Livres.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSwaggerGen();
+
+
+// Add the LivreContext
+builder.Services.AddSqlite<LivreContext>("Data Source=BibliothequeLivres.db");
+
+
+
+
+
 
 var app = builder.Build();
 
