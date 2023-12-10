@@ -15,7 +15,10 @@ namespace Gestion_Livres.Services
         //1.Demander la liste complète de livres
         public IEnumerable<Livre> GetAll() 
         { 
-            return m_context.Livres.AsNoTracking().ToList();
+            return m_context.Livres
+                    .Include(l => l.Exemplaires)
+                    .AsNoTracking()
+                    .ToList();
         }
 
         //2.Demander un seul livre 

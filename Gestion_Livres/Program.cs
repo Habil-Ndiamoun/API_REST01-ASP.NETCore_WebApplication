@@ -1,4 +1,5 @@
 using Gestion_Livres.Data;
+using Gestion_Livres.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,13 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSwaggerGen();
 
-
 // Add the LivreContext
 builder.Services.AddSqlite<LivreContext>("Data Source=BibliothequeLivres.db");
 
-
-
-
+// Add the PizzaService
+builder.Services.AddScoped<LivreService>();
 
 
 var app = builder.Build();

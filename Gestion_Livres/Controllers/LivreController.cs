@@ -15,7 +15,7 @@ namespace Gestion_Livres.Controllers
             m_service = p_service;
         }
 
-        // GET: api/Livre
+        // GET: api/livre
         [HttpGet]
         [ProducesResponseType(200)]
         public IEnumerable<Livre> GetAll()
@@ -23,7 +23,7 @@ namespace Gestion_Livres.Controllers
             return m_service.GetAll();
         }
 
-        // GET: api/Livre/5
+        // GET: api/livre/5
         [HttpGet("{id}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
@@ -41,7 +41,7 @@ namespace Gestion_Livres.Controllers
             }
         }
 
-        // POST: api/Livre
+        // POST: api/livre
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -57,7 +57,7 @@ namespace Gestion_Livres.Controllers
         }
 
 
-        // PUT: api/Livre/4/addExemplaire?ExemplaireId=5
+        // PUT: api/livre/4/addExemplaire?ExemplaireId=5
         [HttpPut("{id}/addExemplaire")]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
@@ -76,7 +76,7 @@ namespace Gestion_Livres.Controllers
             }
         }
 
-        // PUT: api/Livre/5
+        // PUT: api/livre/5
         [HttpPut("{id}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -99,7 +99,7 @@ namespace Gestion_Livres.Controllers
             return NoContent();
         }
 
-        //DELETE: api/Livre/5
+        //DELETE: api/livre/5
         [HttpDelete("{id}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
