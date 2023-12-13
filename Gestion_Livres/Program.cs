@@ -10,8 +10,9 @@ builder.Services.AddSwaggerGen();
 // Add the LivreContext
 builder.Services.AddSqlite<LivreContext>("Data Source=BibliothequeLivres.db");
 
-// Add the PizzaService
+// Add the PizzaService and the ExemplaireService
 builder.Services.AddScoped<LivreService>();
+builder.Services.AddScoped<ExemplaireService>();
 
 
 var app = builder.Build();

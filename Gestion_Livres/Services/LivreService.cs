@@ -6,7 +6,7 @@ namespace Gestion_Livres.Services
 {
     public class LivreService
     {
-        public readonly LivreContext m_context;
+        private readonly LivreContext m_context;
         public LivreService(LivreContext p_context)
         {
             m_context = p_context;
