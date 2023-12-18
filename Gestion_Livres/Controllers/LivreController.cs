@@ -89,7 +89,6 @@ namespace Gestion_Livres.Controllers
             }
 
             var livreAModifier = m_service.GetById(id);
-            
             if(livreAModifier == null)
             {
                 return NotFound();
