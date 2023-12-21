@@ -93,7 +93,6 @@ namespace Gestion_Livres.Controllers
         //DELETE: api/livre/1/exemplaires/5
         [HttpDelete("{exemplaireId}")]
         [ProducesResponseType(204)]
-        [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public IActionResult DeleteById(int livreId, int exemplaireId)
         {
